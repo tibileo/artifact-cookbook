@@ -12,3 +12,4 @@ supports "ubuntu"
 supports "windows", ">= 6.0"
 
 depends "windows"
+depends "seven_zip"

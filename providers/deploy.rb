@@ -234,10 +234,11 @@ def extract_artifact!
       end
     when /zip$/
       if Chef::Artifact.windows?
-        windows_zipfile release_path do
-          source    cached_tar_path
+        seven_zip_archive 'extract artifact archive' do
+          path release_path
+          source cached_tar_path
           overwrite true
-          retries 2
+          action :extract
         end
       else
         package "unzip"
