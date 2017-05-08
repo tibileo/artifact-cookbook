@@ -11,5 +11,5 @@ supports "fedora"
 supports "ubuntu"
 supports "windows", ">= 6.0"
 
-depends "windows"
+depends "windows", "= 2.1.1"
 depends "seven_zip"
